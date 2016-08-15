@@ -1,0 +1,31 @@
+group 'propel'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'idea'
+
+
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+war {
+    webAppDirName = "src/main/web"
+}
+
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile("org.springframework.boot:spring-boot-starter-web:1.4.0.RELEASE")
+}
+
+
