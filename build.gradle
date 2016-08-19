@@ -4,12 +4,19 @@ version '1.0-SNAPSHOT'
 apply plugin: 'java'
 apply plugin: 'war'
 apply plugin: 'idea'
+apply plugin: 'spring-boot'
 
 
 
 buildscript {
+    ext {
+        springBootVersion = '1.4.0.RELEASE'
+    }
     repositories {
         mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
 }
 
@@ -26,6 +33,7 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
     compile("org.springframework.boot:spring-boot-starter-web:1.4.0.RELEASE")
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 }
 
 
