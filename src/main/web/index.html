@@ -1,4 +1,4 @@
-<html>
+<html ng-app="propel">
 <head>
     <title>Propel</title>
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -27,26 +27,20 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a ui-sref="home" ui-sref-active="active">Home</a></li>
+                <li><a ui-sref="other" ui-sref-active="active">Other</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<div class="container">
+<div ui-view></div>
 
-    <div class="starter-template">
-        <h1>Replace Me!</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-    </div>
-
-</div><!-- /.container -->
-
-<script src="node_modules/jquery/dist/jquery.min.js"></script>
-<script src="node_modules/angular/angular.min.js"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<!--<script src="node_modules/jquery/dist/jquery.min.js"></script>-->
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="app.js"></script>
+<script src="app/components/main/mainController.js"></script>
 
 </body>
 
