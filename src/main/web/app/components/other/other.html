@@ -5,9 +5,9 @@
     <table class="table">
         <caption>Wired to Spring/Mongo endpoint</caption>
         <tr><td>Browsers</td><td>Count</td></tr>
-        <tr ng-repeat="browser in browsers">
-            <td>{{browser.name}}</td>
-            <td>{{browser.count}}</td>
+        <tr ng-repeat="browserCount in browsers | orderBy: '-count'">
+            <td>{{browserCount.browser}}</td>
+            <td>{{browserCount.count}}</td>
         </tr>
     </table>
 </div>

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.*;
+import java.util.function.Consumer;
 
 /**
  * Created by U0011960 on 8/31/16.
@@ -24,7 +25,7 @@ public class StatisticsController {
 
     @RequestMapping(path="/browsers",method = RequestMethod.GET)
     public BrowserCount[] browserCounts() {
-        Collection<BrowserCount> allBrowserCount = statsService.getAllBrowserCount();
+        List<BrowserCount> allBrowserCount = statsService.getGroupByBrowser();
         return allBrowserCount.toArray(new BrowserCount[allBrowserCount.size()]);
     }
 

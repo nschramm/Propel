@@ -5,16 +5,16 @@ package com.propel.model;
  */
 public class BrowserCount {
 
-    private String name;
+    private String browser;
     private int count;
 
-    public BrowserCount(String name, int count) {
-        this.name = name;
+    public BrowserCount(String browser, int count) {
+        this.browser = browser;
         this.count = count;
     }
 
-    public String getName() {
-        return name;
+    public String getBrowser() {
+        return browser;
     }
 
     public int getCount() {
@@ -23,5 +23,9 @@ public class BrowserCount {
 
     public void increment() {
         this.count++;
+    }
+
+    public void setBrowser(String browser) {
+        this.browser = browser;
     }
 }
