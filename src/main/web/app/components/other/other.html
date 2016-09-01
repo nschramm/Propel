@@ -1,5 +1,12 @@
-<div class="container" ng-controller="MainController">
+<div class="container" ng-controller="OtherController">
     <div class="starter-template">
         <h1>I AM THE OTHER PAGE!</h1>
     </div>
+    <table class="table">
+        <tr><td>Browsers</td><td>Count</td></tr>
+        <tr ng-repeat="browser in browsers">
+            <td>{{browser.name}}</td>
+            <td>{{browser.count}}</td>
+        </tr>
+    </table>
 </div>

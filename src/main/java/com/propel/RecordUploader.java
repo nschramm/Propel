@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * Created by U0011960 on 8/22/16.
  */
-@SpringBootApplication
+//@SpringBootApplication
 public class RecordUploader implements CommandLineRunner {
 
     private static final Log logger = LogFactory.getLog(RecordUploader.class);
@@ -115,9 +115,11 @@ public class RecordUploader implements CommandLineRunner {
         return line;
     }
 
+/*
     public static void main(String[] args) throws Exception {
         SpringApplication.run(RecordUploader.class, args);
     }
+*/
 
 
 }

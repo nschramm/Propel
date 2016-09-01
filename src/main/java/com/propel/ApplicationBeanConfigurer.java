@@ -1,7 +1,6 @@
 package com.propel;
 
 import com.propel.services.*;
-import com.propel.utils.UserActionRecordBuilderUtils;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -39,6 +38,11 @@ public class ApplicationBeanConfigurer {
     public @Bean
     RecordStoreService userActionRecordStore() {
         return new UserActionRecordStoreService();
+    }
+
+    public @Bean
+    BrowserStatsService browserStatsService() {
+        return new BrowserStatsService();
     }
 
 }

@@ -12,6 +12,7 @@ import java.util.List;
 @EnableMongoRepositories
 public interface BrowserRepository extends MongoRepository<Browser, String> {
 
+    List<Browser> findAll();
     List<Browser> findByBrowser(String browser);
 
 }
