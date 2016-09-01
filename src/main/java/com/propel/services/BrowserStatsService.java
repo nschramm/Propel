@@ -9,16 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.mapreduce.GroupBy;
 import org.springframework.data.mongodb.core.mapreduce.GroupByResults;
-import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.Criteria.*;
-
-//import static org.springframework.data.mongodb.core.mapreduce.GroupBy.keyFunction;
-//import static org.springframework.data.mongodb.core.query.Criteria.where;
 
 
 import java.util.*;
-import java.util.function.Consumer;
-import java.util.stream.Collectors;
 
 /**
  * Created by U0011960 on 8/31/16.
