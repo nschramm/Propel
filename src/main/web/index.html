@@ -1,10 +1,49 @@
-<html>
+<html ng-app="propel">
 <head>
     <title>Propel</title>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 50px;
+        }
+        .starter-template {
+            padding: 40px 15px;
+            text-align: center;
+        }
+    </style>
 </head>
+<body>
 
-<div>
-    <h1>Hi There!!</h1>
-</div>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Propel</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a ui-sref="home" ui-sref-active="active">Home</a></li>
+                <li><a ui-sref="other" ui-sref-active="active">Other</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div ui-view></div>
+
+<!--<script src="node_modules/jquery/dist/jquery.min.js"></script>-->
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="app.js"></script>
+<script src="app/components/main/mainController.js"></script>
+<script src="app/components/other/otherServices.js"></script>
+<script src="app/components/other/otherController.js"></script>
+
 </body>
+
 </html>

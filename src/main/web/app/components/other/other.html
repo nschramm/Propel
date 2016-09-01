@@ -1,0 +1,13 @@
+<div class="container" ng-controller="OtherController">
+    <div class="starter-template">
+        <h1>I AM THE OTHER PAGE!</h1>
+    </div>
+    <table class="table">
+        <caption>Wired to Spring/Mongo endpoint</caption>
+        <tr><td>Browsers</td><td>Count</td></tr>
+        <tr ng-repeat="browserCount in browsers | orderBy: '-count'">
+            <td>{{browserCount.browser}}</td>
+            <td>{{browserCount.count}}</td>
+        </tr>
+    </table>
+</div>
